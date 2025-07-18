@@ -50,9 +50,13 @@ macro_rules! assert_approx_eq {
 
 #[macro_export]
 macro_rules! assert_approx_eq_slice {
-    ($a:expr, $b:expr) => {
-        let a: &[_] = ::core::convert::AsRef::as_ref(&$a);
-        let b: &[_] = ::core::convert::AsRef::as_ref(&$b);
+    ($a:expr, $b:expr) => {{
+        let a = $a;
+        let b = $b;
+
+        let a: &[_] = ::core::convert::AsRef::as_ref(&a);
+        let b: &[_] = ::core::convert::AsRef::as_ref(&b);
+
         assert_eq!(
             a.len(),
             b.len(),
@@ -62,5 +66,5 @@ macro_rules! assert_approx_eq_slice {
         for (&a, &b) in a.iter().zip(b) {
             $crate::assert_approx_eq!(a, b);
         }
-    };
+    }};
 }

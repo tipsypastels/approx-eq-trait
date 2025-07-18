@@ -1,6 +1,6 @@
 [package]
 name = "approx-eq-trait"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "A trait for floating-point equality."
 repository = "https://github.com/tipsypastels/approx-eq-trait"
