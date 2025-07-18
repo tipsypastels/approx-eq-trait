@@ -1,0 +1,6 @@
+[package]
+name = "approx-eq-trait"
+version = "0.1.0"
+edition = "2024"
+repository = "https://github.com/tipsypastels/approx-eq-trait"
+license = "MIT"
