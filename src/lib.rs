@@ -38,7 +38,7 @@ impl ApproxEq for f64 {
 
 #[macro_export]
 macro_rules! assert_approx_eq {
-    ($a:expr, $b:expr) => {{
+    ($a:expr, $b:expr$(,)?) => {{
         let a = $a;
         let b = $b;
         assert!(
@@ -50,7 +50,7 @@ macro_rules! assert_approx_eq {
 
 #[macro_export]
 macro_rules! assert_approx_eq_slice {
-    ($a:expr, $b:expr) => {{
+    ($a:expr, $b:expr$(,)?) => {{
         let a = $a;
         let b = $b;
 
